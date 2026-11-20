@@ -181,6 +181,15 @@ type Config struct {
 
 	// StopMem is the threshold for stopping learning.
 	StopMem float32 `default:"1"`
+
+	// ThetaKCA1 is the sharpness of the theta gate on the ECin -> CA1 and
+	// CA3 -> CA1 pathways. < 0 = original discrete switches, 0 = pure cosine,
+	// > 0 = tanh-sharpened cosine (approaches discrete as k grows).
+	ThetaKCA1 float32 `default:"-1"`
+
+	// ThetaKDG is the sharpness of the DG -> CA3 gate's rising edge
+	// (same convention as ThetaKCA1).
+	ThetaKDG float32 `default:"-1"`
 }
 
 // Sim encapsulates the entire simulation model, and we define all the
@@ -424,9 +433,42 @@ func (ss *Sim) InitRandSeed(run int) {
 	patgen.NewRand(ss.RandSeeds[run])
 }
 
-// MY ADDED CODE FOR THE THETA CONTINOUS FUNCTION
-// ConfigLoopsHipContinuous configures the hippocampal looper with continuous
-// theta-modulated pathway scaling using a sine wave.
+// thetaEC returns the EC-side theta gate in [0,1] at the given cycle of a
+// 100-cycle trial: 1 at cycles 0 and 100, 0 at cycle 50, 0.5 at 25 and 75.
+// k < 0 gives the original discrete switches (EC on for cycles 0-24 and
+// 75-99), k == 0 a pure cosine, and k > 0 the tanh-sharpened cosine
+// tanh(k cos)/tanh(k), which converges pointwise to the discrete switch.
+func thetaEC(cycle int, k float32) float32 {
+	if k < 0 {
+		if cycle < 25 || cycle >= 75 {
+			return 1
+		}
+		return 0
+	}
+	x := math32.Cos(2 * math32.Pi * float32(cycle) / 100)
+	if k > 0 {
+		x = math32.Tanh(k*x) / math32.Tanh(k)
+	}
+	return 0.5 * (1 + x)
+}
+
+// thetaDG returns the DG -> CA3 gate in [0,1]: the rising (CA3-side) edge of
+// the theta gate until cycle 50, then held on through the plus phase.
+// k < 0 gives the original discrete step (off for cycles 0-24, then on).
+func thetaDG(cycle int, k float32) float32 {
+	if cycle >= 50 {
+		return 1
+	}
+	return 1 - thetaEC(cycle, k)
+}
+
+// ConfigLoopsHipContinuous configures the hippocampal theta rhythm with
+// continuous pathway scaling, updated every cycle. Amplitudes and phases match
+// leabra's discrete ConfigLoopsHip, which this reproduces when ThetaKCA1 and
+// ThetaKDG are < 0:
+//   - ECin -> CA1 Abs = thetaEC, CA3 -> CA1 Abs = 1 - thetaEC
+//   - DG -> CA3 Rel = thetaDG * (DG Rel param in Train, 1 in Test)
+//   - Train: ECout target set to ECin activity at the start of the plus phase
 func (ss *Sim) ConfigLoopsHipContinuous(ls *looper.Stacks) {
 	ctx := &ss.Context
 	net := ss.Net
@@ -439,39 +481,39 @@ func (ss *Sim) ConfigLoopsHipContinuous(ls *looper.Stacks) {
 	ca3FromDg := errors.Log1(ca3.RecvPathBySendName("DG")).(*leabra.Path)
 
 	dgPjScale := ca3FromDg.WtScale.Rel
-	maxCycles := float32(100) // Assuming a standard 100-cycle trial
 
-	// Run every cycle to apply continuous sinusoidal modulation
-	ls.AddEventAllModes(etime.Cycle, "ThetaModulation", 1, func() {
-		// Calculate theta phase across the trial (1 full cycle = 2 * Pi)
-		cycleFraction := float32(ctx.Cycle) / maxCycles
-		phase := cycleFraction * 2 * math32.Pi
-
-		// Use sine waves phased appropriately for complementary pathways
-		sinVal := 0.5 * (1 + math32.Sin(phase))
-		cosVal := 0.5 * (1 + math32.Cos(phase))
-
-		// Continuously modulate weights
-		ca1FromECin.WtScale.Abs = sinVal
-		ca1FromCa3.WtScale.Abs = cosVal
-
-		// Dentate gyrus scaling modulation for CA3 pattern separation
+	// Runs at the start of every cycle, before net.Cycle (ctx.Cycle = 0..99).
+	thetaUpdate := func() bool {
+		ec := thetaEC(ctx.Cycle, ss.Config.ThetaKCA1)
+		dgMax := dgPjScale
 		if ctx.Mode == etime.Test {
-			ca3FromDg.WtScale.Rel = cosVal * 1.0
-		} else {
-			ca3FromDg.WtScale.Rel = cosVal * dgPjScale
+			dgMax = 1 // weaker DG during testing, as in the original
 		}
-
-		// Handle phase-specific inputs (e.g., updating ECout extension during plus phase)
-		if ctx.Mode == etime.Train && ctx.Cycle >= 75 {
-			var tmpValues []float32
-			ecin.UnitValues(&tmpValues, "Act", 0)
-			ecout.ApplyExt1D32(tmpValues)
+		dg := thetaDG(ctx.Cycle, ss.Config.ThetaKDG) * dgMax
+		if ca1FromECin.WtScale.Abs == ec && ca1FromCa3.WtScale.Abs == 1-ec && ca3FromDg.WtScale.Rel == dg {
+			return true // no change: skip the conductance rescale
 		}
-
+		ca1FromECin.WtScale.Abs = ec
+		ca1FromCa3.WtScale.Abs = 1 - ec
+		ca3FromDg.WtScale.Rel = dg
 		net.GScaleFromAvgAct()
 		net.InitGInc()
-	})
+		return true
+	}
+
+	var tmpValues []float32
+	for _, st := range ls.Stacks {
+		st.Loops[etime.Cycle].OnStart.Prepend("HipTheta", thetaUpdate)
+		// plus phase: clamp ECout to ECin activity once, at cycle 75
+		ev := st.Loops[etime.Cycle].EventByCounter(75)
+		ev.OnEvent.Prepend("HipPlusPhase:Start", func() bool {
+			if ctx.Mode == etime.Train {
+				ecin.UnitValues(&tmpValues, "Act", 0)
+				ecout.ApplyExt1D32(tmpValues)
+			}
+			return true
+		})
+	}
 }
 
 // ConfigLoops configures the control loops: Training, Testing
@@ -487,8 +529,8 @@ func (ss *Sim) ConfigLoops() {
 
 	leabra.LooperStdPhases(ls, &ss.Context, ss.Net, 75, 99)                // plus phase timing
 	leabra.LooperSimCycleAndLearn(ls, ss.Net, &ss.Context, &ss.ViewUpdate) // std algo code
-	ss.ConfigLoopsHipContinuous(ls)                                        //NEW CONTINUOUS THETA FUNCTION CONFIG
-	//ss.Net.ConfigLoopsHip(&ss.Context, ls) //ORIGINAL DISCRETE
+	ss.ConfigLoopsHipContinuous(ls)                                        // continuous theta (ThetaK* < 0 = discrete)
+	// ss.Net.ConfigLoopsHip(&ss.Context, ls)                              // original leabra discrete version
 
 	ls.Stacks[etime.Train].OnInit.Add("Init", func() { ss.Init() })
 	ls.Stacks[etime.Test].OnInit.Add("Init", func() { ss.TestInit() })
