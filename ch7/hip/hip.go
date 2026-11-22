@@ -190,6 +190,16 @@ type Config struct {
 	// ThetaKDG is the sharpness of the DG -> CA3 gate's rising edge
 	// (same convention as ThetaKCA1).
 	ThetaKDG float32 `default:"-1"`
+
+	// XCal switches the hippocampal learning pathways (EcCa1Path and CHLPath)
+	// from the theta-phase snapshot rules (ActP vs ActQ1 / ActM) to standard
+	// leabra XCal, which compares running averages (AvgSLrn vs AvgM).
+	// All other params, including learning rates, are unchanged.
+	XCal bool `default:"false"`
+
+	// XCalMTau is the medium time constant (cycles) of the AvgM running
+	// average, applied to all layers when XCal is on. Leabra default is 10.
+	XCalMTau float32 `default:"10"`
 }
 
 // Sim encapsulates the entire simulation model, and we define all the
@@ -352,27 +362,40 @@ func (ss *Sim) ConfigNet(net *leabra.Network) {
 	net.ConnectLayers(in, ecin, onetoone, leabra.ForwardPath)
 	net.ConnectLayers(ecout, ecin, onetoone, leabra.BackPath)
 
+	// hipPath connects a hippocampal pathway with the original learning rule
+	// (typ), or with standard XCal (ForwardPath) when Config.XCal is set. In the
+	// XCal case the original type name is added as a class, so the param sheet's
+	// .EcCa1Path selector still applies and only the learning rule changes.
+	hipPath := func(send, recv *leabra.Layer, pat paths.Pattern, typ leabra.PathTypes) *leabra.Path {
+		if !ss.Config.XCal {
+			return net.ConnectLayers(send, recv, pat, typ)
+		}
+		pt := net.ConnectLayers(send, recv, pat, leabra.ForwardPath)
+		pt.AddClass(typ.String())
+		return pt
+	}
+
 	// EC <-> CA1 encoder pathways
-	net.ConnectLayers(ecin, ca1, pool1to1, leabra.EcCa1Path)
-	net.ConnectLayers(ca1, ecout, pool1to1, leabra.EcCa1Path)
-	net.ConnectLayers(ecout, ca1, pool1to1, leabra.EcCa1Path)
+	hipPath(ecin, ca1, pool1to1, leabra.EcCa1Path)
+	hipPath(ca1, ecout, pool1to1, leabra.EcCa1Path)
+	hipPath(ecout, ca1, pool1to1, leabra.EcCa1Path)
 
 	// Perforant pathway
 	ppath := paths.NewUniformRand()
 	ppath.PCon = 0.25
 
-	net.ConnectLayers(ecin, dg, ppath, leabra.CHLPath).AddClass("HippoCHL")
+	hipPath(ecin, dg, ppath, leabra.CHLPath).AddClass("HippoCHL")
 
-	net.ConnectLayers(ecin, ca3, ppath, leabra.EcCa1Path).AddClass("PPath")
-	net.ConnectLayers(ca3, ca3, full, leabra.EcCa1Path).AddClass("PPath")
+	hipPath(ecin, ca3, ppath, leabra.EcCa1Path).AddClass("PPath")
+	hipPath(ca3, ca3, full, leabra.EcCa1Path).AddClass("PPath")
 
 	// Mossy fibers
 	mossy := paths.NewUniformRand()
 	mossy.PCon = 0.02
-	net.ConnectLayers(dg, ca3, mossy, leabra.CHLPath).AddClass("HippoCHL")
+	hipPath(dg, ca3, mossy, leabra.CHLPath).AddClass("HippoCHL")
 
 	// Schafer collaterals
-	net.ConnectLayers(ca3, ca1, full, leabra.CHLPath).AddClass("HippoCHL")
+	hipPath(ca3, ca1, full, leabra.CHLPath).AddClass("HippoCHL")
 
 	ecin.PlaceRightOf(in, 2)
 	ecout.PlaceRightOf(ecin, 2)
@@ -402,6 +425,12 @@ func (ss *Sim) ConfigNet(net *leabra.Network) {
 func (ss *Sim) ApplyParams() {
 	ss.Params.Network = ss.Net
 	ss.Params.SetAll()
+	if ss.Config.XCal {
+		for _, ly := range ss.Net.Layers {
+			ly.Learn.ActAvg.MTau = ss.Config.XCalMTau
+			ly.Learn.ActAvg.Update()
+		}
+	}
 }
 
 ////////////////////////////////////////////////////////////////////////////////

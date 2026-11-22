@@ -1,0 +1,565 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="930" viewBox="0 0 1100 930" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect width="1100" height="930" fill="#fcfcfb"/>
+<text x="20" y="30" font-size="19" font-weight="600" fill="#1f1f1d">XCal medium time constant (MTau) sweep by theta gate — n = 100 runs per point, mean ± SEM</text>
+<text x="20" y="51" font-size="12.5" fill="#5f5e5a">Log x-axis. Second axis row = cycle AvgM is centred on at learning time (≈ 99 − (MTau + 1)). Dashed lines = snapshot rule (original) for the same theta. Cosine = k = 0.</text>
+<line x1="20" y1="78" x2="42" y2="78" stroke="#2a78d6" stroke-width="2"/><circle cx="31.0" cy="78.0" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete</title></circle>
+<text x="50" y="82" font-size="13" fill="#1f1f1d">Both gates discrete</text>
+<line x1="203.0" y1="78" x2="225.0" y2="78" stroke="#eb6834" stroke-width="2"/><rect x="209.5" y="73.5" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete)</title></rect>
+<text x="233.0" y="82" font-size="13" fill="#1f1f1d">CA1 gate cosine (DG discrete)</text>
+<line x1="456.0" y1="78" x2="478.0" y2="78" stroke="#1baf7a" stroke-width="2"/><polygon points="467.0,72.2 472.9,78.0 467.0,83.8 461.1,78.0" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete)</title></polygon>
+<text x="486.0" y="82" font-size="13" fill="#1f1f1d">DG gate cosine (CA1 discrete)</text>
+<line x1="709.0" y1="78" x2="731.0" y2="78" stroke="#eda100" stroke-width="2"/><polygon points="720.0,72.2 725.9,82.7 714.1,82.7" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine</title></polygon>
+<text x="739.0" y="82" font-size="13" fill="#1f1f1d">Both gates cosine</text>
+<text x="70" y="132" font-size="15" font-weight="600" fill="#1f1f1d">AB retained after AC</text>
+<line x1="70" y1="404.0" x2="530" y2="404.0" stroke="#e4e2dd" stroke-width="1"/>
+<text x="62" y="408.0" font-size="11" text-anchor="end" fill="#5f5e5a">0.0</text>
+<line x1="70" y1="352.0" x2="530" y2="352.0" stroke="#e4e2dd" stroke-width="1"/>
+<text x="62" y="356.0" font-size="11" text-anchor="end" fill="#5f5e5a">0.2</text>
+<line x1="70" y1="300.0" x2="530" y2="300.0" stroke="#e4e2dd" stroke-width="1"/>
+<text x="62" y="304.0" font-size="11" text-anchor="end" fill="#5f5e5a">0.4</text>
+<line x1="70" y1="248.0" x2="530" y2="248.0" stroke="#e4e2dd" stroke-width="1"/>
+<text x="62" y="252.0" font-size="11" text-anchor="end" fill="#5f5e5a">0.6</text>
+<line x1="70" y1="196.0" x2="530" y2="196.0" stroke="#e4e2dd" stroke-width="1"/>
+<text x="62" y="200.0" font-size="11" text-anchor="end" fill="#5f5e5a">0.8</text>
+<line x1="70" y1="144.0" x2="530" y2="144.0" stroke="#e4e2dd" stroke-width="1"/>
+<text x="62" y="148.0" font-size="11" text-anchor="end" fill="#5f5e5a">1.0</text>
+<text transform="translate(22,274.0) rotate(-90)" font-size="11.5" text-anchor="middle" fill="#5f5e5a">proportion recalled</text>
+<text x="101.9" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">10</text>
+<text x="101.9" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">88</text>
+<text x="159.8" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">15</text>
+<text x="159.8" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">83</text>
+<text x="200.9" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">20</text>
+<text x="200.9" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">78</text>
+<text x="232.8" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">25</text>
+<text x="232.8" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">73</text>
+<text x="258.9" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">30</text>
+<text x="258.9" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">68</text>
+<text x="300.0" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">40</text>
+<text x="300.0" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">58</text>
+<text x="331.9" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">50</text>
+<text x="331.9" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">48</text>
+<text x="357.9" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">60</text>
+<text x="357.9" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">38</text>
+<text x="386.0" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">73</text>
+<text x="386.0" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">25</text>
+<text x="415.9" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">90</text>
+<text x="415.9" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">8</text>
+<text x="457.0" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">120</text>
+<text x="457.0" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">prev.</text>
+<text x="498.1" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">160</text>
+<text x="498.1" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">prev.</text>
+<text x="62" y="420" font-size="10" text-anchor="end" fill="#5f5e5a">MTau</text>
+<text x="62" y="435" font-size="9.5" text-anchor="end" fill="#5f5e5a">cycle</text>
+<line x1="70" y1="239.2" x2="530" y2="239.2" stroke="#2a78d6" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.85"><title>snapshot rule, Both gates discrete: 0.634</title></line>
+<polyline fill="none" stroke="#2a78d6" stroke-width="2" points="97.4,382.4 155.3,314.6 196.4,255.0 228.3,231.9 254.4,223.8 295.5,215.2 327.4,211.1 353.4,216.8 381.5,220.2 411.4,229.8 452.5,223.3 493.6,218.9"/>
+<line x1="97.4" y1="384.5" x2="97.4" y2="380.3" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="97.4" cy="382.4" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 10: 0.083 [0.075, 0.091]</title></circle>
+<line x1="155.3" y1="318.7" x2="155.3" y2="310.4" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="155.3" cy="314.6" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 15: 0.344 [0.328, 0.360]</title></circle>
+<line x1="196.4" y1="259.1" x2="196.4" y2="250.9" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="196.4" cy="255.0" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 20: 0.573 [0.557, 0.589]</title></circle>
+<line x1="228.3" y1="236.8" x2="228.3" y2="227.0" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="228.3" cy="231.9" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 25: 0.662 [0.643, 0.681]</title></circle>
+<line x1="254.4" y1="228.9" x2="254.4" y2="218.7" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="254.4" cy="223.8" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 30: 0.693 [0.673, 0.713]</title></circle>
+<line x1="295.5" y1="220.1" x2="295.5" y2="210.4" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="295.5" cy="215.2" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 40: 0.726 [0.707, 0.745]</title></circle>
+<line x1="327.4" y1="215.2" x2="327.4" y2="207.0" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="327.4" cy="211.1" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 50: 0.742 [0.726, 0.758]</title></circle>
+<line x1="353.4" y1="221.7" x2="353.4" y2="211.9" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="353.4" cy="216.8" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 60: 0.720 [0.701, 0.739]</title></circle>
+<line x1="381.5" y1="225.6" x2="381.5" y2="214.8" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="381.5" cy="220.2" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 73: 0.707 [0.686, 0.728]</title></circle>
+<line x1="411.4" y1="235.2" x2="411.4" y2="224.4" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="411.4" cy="229.8" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 90: 0.670 [0.649, 0.691]</title></circle>
+<line x1="452.5" y1="228.2" x2="452.5" y2="218.4" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="452.5" cy="223.3" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 120: 0.695 [0.676, 0.714]</title></circle>
+<line x1="493.6" y1="223.6" x2="493.6" y2="214.1" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="493.6" cy="218.9" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 160: 0.712 [0.694, 0.730]</title></circle>
+<line x1="70" y1="261.3" x2="530" y2="261.3" stroke="#eb6834" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.85"><title>snapshot rule, CA1 gate cosine (DG discrete): 0.549</title></line>
+<polyline fill="none" stroke="#eb6834" stroke-width="2" points="100.4,368.9 158.3,323.7 199.4,264.1 231.3,239.9 257.4,230.1 298.5,233.7 330.4,227.2 356.4,226.2 384.5,223.3 414.4,239.4 455.5,232.7 496.6,234.0"/>
+<line x1="100.4" y1="371.6" x2="100.4" y2="366.2" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="95.9" y="364.4" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 10: 0.135 [0.125, 0.145]</title></rect>
+<line x1="158.3" y1="327.6" x2="158.3" y2="319.7" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="153.8" y="319.2" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 15: 0.309 [0.294, 0.324]</title></rect>
+<line x1="199.4" y1="268.1" x2="199.4" y2="260.1" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="194.9" y="259.6" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 20: 0.538 [0.523, 0.553]</title></rect>
+<line x1="231.3" y1="245.4" x2="231.3" y2="234.5" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="226.8" y="235.4" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 25: 0.631 [0.610, 0.652]</title></rect>
+<line x1="257.4" y1="235.1" x2="257.4" y2="225.1" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="252.9" y="225.6" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 30: 0.669 [0.650, 0.688]</title></rect>
+<line x1="298.5" y1="238.2" x2="298.5" y2="229.2" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="294.0" y="229.2" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 40: 0.655 [0.638, 0.672]</title></rect>
+<line x1="330.4" y1="232.1" x2="330.4" y2="222.3" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="325.9" y="222.7" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 50: 0.680 [0.661, 0.699]</title></rect>
+<line x1="356.4" y1="231.1" x2="356.4" y2="221.2" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="351.9" y="221.7" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 60: 0.684 [0.665, 0.703]</title></rect>
+<line x1="384.5" y1="228.7" x2="384.5" y2="217.9" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="380.0" y="218.8" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 73: 0.695 [0.674, 0.716]</title></rect>
+<line x1="414.4" y1="244.9" x2="414.4" y2="233.9" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="409.9" y="234.9" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 90: 0.633 [0.612, 0.654]</title></rect>
+<line x1="455.5" y1="237.9" x2="455.5" y2="227.4" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="451.0" y="228.2" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 120: 0.659 [0.639, 0.679]</title></rect>
+<line x1="496.6" y1="239.0" x2="496.6" y2="228.9" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="492.1" y="229.5" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 160: 0.654 [0.634, 0.674]</title></rect>
+<line x1="70" y1="256.6" x2="530" y2="256.6" stroke="#1baf7a" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.85"><title>snapshot rule, DG gate cosine (CA1 discrete): 0.567</title></line>
+<polyline fill="none" stroke="#1baf7a" stroke-width="2" points="103.4,384.2 161.3,325.2 202.4,264.1 234.3,239.7 260.4,228.8 301.5,224.6 333.4,230.1 359.4,220.4 387.5,228.0 417.4,236.3 458.5,224.9 499.6,225.6"/>
+<line x1="103.4" y1="386.4" x2="103.4" y2="382.1" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="103.4,378.4 109.2,384.2 103.4,390.1 97.5,384.2" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 10: 0.076 [0.068, 0.084]</title></polygon>
+<line x1="161.3" y1="329.1" x2="161.3" y2="321.4" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="161.3,319.4 167.2,325.2 161.3,331.1 155.5,325.2" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 15: 0.303 [0.288, 0.318]</title></polygon>
+<line x1="202.4" y1="268.4" x2="202.4" y2="259.9" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="202.4,258.3 208.3,264.1 202.4,270.0 196.6,264.1" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 20: 0.538 [0.522, 0.554]</title></polygon>
+<line x1="234.3" y1="244.7" x2="234.3" y2="234.6" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="234.3,233.8 240.2,239.7 234.3,245.5 228.5,239.7" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 25: 0.632 [0.613, 0.651]</title></polygon>
+<line x1="260.4" y1="233.5" x2="260.4" y2="224.0" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="260.4,222.9 266.2,228.8 260.4,234.6 254.5,228.8" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 30: 0.674 [0.656, 0.692]</title></polygon>
+<line x1="301.5" y1="229.3" x2="301.5" y2="219.9" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="301.5,218.8 307.4,224.6 301.5,230.5 295.7,224.6" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 40: 0.690 [0.672, 0.708]</title></polygon>
+<line x1="333.4" y1="234.8" x2="333.4" y2="225.3" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="333.4,224.2 339.2,230.1 333.4,235.9 327.5,230.1" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 50: 0.669 [0.651, 0.687]</title></polygon>
+<line x1="359.4" y1="225.8" x2="359.4" y2="215.1" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="359.4,214.6 365.3,220.4 359.4,226.3 353.6,220.4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 60: 0.706 [0.685, 0.727]</title></polygon>
+<line x1="387.5" y1="233.9" x2="387.5" y2="222.1" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="387.5,222.1 393.3,228.0 387.5,233.8 381.6,228.0" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 73: 0.677 [0.654, 0.700]</title></polygon>
+<line x1="417.4" y1="242.4" x2="417.4" y2="230.2" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="417.4,230.4 423.2,236.3 417.4,242.1 411.5,236.3" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 90: 0.645 [0.622, 0.668]</title></polygon>
+<line x1="458.5" y1="230.1" x2="458.5" y2="219.6" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="458.5,219.0 464.3,224.9 458.5,230.7 452.6,224.9" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 120: 0.689 [0.669, 0.709]</title></polygon>
+<line x1="499.6" y1="230.6" x2="499.6" y2="220.7" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="499.6,219.8 505.5,225.6 499.6,231.5 493.8,225.6" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 160: 0.686 [0.667, 0.705]</title></polygon>
+<line x1="70" y1="273.5" x2="530" y2="273.5" stroke="#eda100" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.85"><title>snapshot rule, Both gates cosine: 0.502</title></line>
+<polyline fill="none" stroke="#eda100" stroke-width="2" points="106.4,368.1 164.3,326.8 205.4,272.4 237.3,248.3 263.4,241.2 304.5,233.2 336.4,239.4 362.4,223.0 390.5,225.6 420.4,234.2 461.5,232.7 502.6,233.4"/>
+<line x1="106.4" y1="370.9" x2="106.4" y2="365.3" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="106.4,362.3 112.2,372.8 100.5,372.8" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 10: 0.138 [0.127, 0.149]</title></polygon>
+<line x1="164.3" y1="330.4" x2="164.3" y2="323.2" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="164.3,320.9 170.2,331.5 158.5,331.5" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 15: 0.297 [0.283, 0.311]</title></polygon>
+<line x1="205.4" y1="276.4" x2="205.4" y2="268.5" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="205.4,266.6 211.3,277.1 199.6,277.1" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 20: 0.506 [0.491, 0.521]</title></polygon>
+<line x1="237.3" y1="252.9" x2="237.3" y2="243.6" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="237.3,242.4 243.2,252.9 231.5,252.9" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 25: 0.599 [0.581, 0.617]</title></polygon>
+<line x1="263.4" y1="246.5" x2="263.4" y2="236.0" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="263.4,235.4 269.2,245.9 257.5,245.9" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 30: 0.626 [0.606, 0.646]</title></polygon>
+<line x1="304.5" y1="238.2" x2="304.5" y2="228.1" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="304.5,227.3 310.4,237.9 298.7,237.9" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 40: 0.657 [0.638, 0.676]</title></polygon>
+<line x1="336.4" y1="245.1" x2="336.4" y2="233.7" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="336.4,233.6 342.2,244.1 330.5,244.1" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 50: 0.633 [0.611, 0.655]</title></polygon>
+<line x1="362.4" y1="228.6" x2="362.4" y2="217.5" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="362.4,217.2 368.3,227.7 356.6,227.7" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 60: 0.696 [0.675, 0.717]</title></polygon>
+<line x1="390.5" y1="231.3" x2="390.5" y2="220.0" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="390.5,219.8 396.3,230.3 384.6,230.3" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 73: 0.686 [0.664, 0.708]</title></polygon>
+<line x1="420.4" y1="239.6" x2="420.4" y2="228.8" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="420.4,228.4 426.2,238.9 414.5,238.9" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 90: 0.653 [0.632, 0.674]</title></polygon>
+<line x1="461.5" y1="238.2" x2="461.5" y2="227.1" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="461.5,226.8 467.3,237.3 455.6,237.3" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 120: 0.659 [0.638, 0.680]</title></polygon>
+<line x1="502.6" y1="238.4" x2="502.6" y2="228.4" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="502.6,227.6 508.5,238.1 496.8,238.1" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 160: 0.656 [0.637, 0.675]</title></polygon>
+<text x="600" y="132" font-size="15" font-weight="600" fill="#1f1f1d">Epochs to learn AB</text>
+<line x1="600" y1="404.0" x2="1060" y2="404.0" stroke="#e4e2dd" stroke-width="1"/>
+<text x="592" y="408.0" font-size="11" text-anchor="end" fill="#5f5e5a">0</text>
+<line x1="600" y1="360.7" x2="1060" y2="360.7" stroke="#e4e2dd" stroke-width="1"/>
+<text x="592" y="364.7" font-size="11" text-anchor="end" fill="#5f5e5a">2</text>
+<line x1="600" y1="317.3" x2="1060" y2="317.3" stroke="#e4e2dd" stroke-width="1"/>
+<text x="592" y="321.3" font-size="11" text-anchor="end" fill="#5f5e5a">4</text>
+<line x1="600" y1="274.0" x2="1060" y2="274.0" stroke="#e4e2dd" stroke-width="1"/>
+<text x="592" y="278.0" font-size="11" text-anchor="end" fill="#5f5e5a">6</text>
+<line x1="600" y1="230.7" x2="1060" y2="230.7" stroke="#e4e2dd" stroke-width="1"/>
+<text x="592" y="234.7" font-size="11" text-anchor="end" fill="#5f5e5a">8</text>
+<line x1="600" y1="187.3" x2="1060" y2="187.3" stroke="#e4e2dd" stroke-width="1"/>
+<text x="592" y="191.3" font-size="11" text-anchor="end" fill="#5f5e5a">10</text>
+<line x1="600" y1="144.0" x2="1060" y2="144.0" stroke="#e4e2dd" stroke-width="1"/>
+<text x="592" y="148.0" font-size="11" text-anchor="end" fill="#5f5e5a">12</text>
+<text transform="translate(552,274.0) rotate(-90)" font-size="11.5" text-anchor="middle" fill="#5f5e5a">epoch (10 = never learned)</text>
+<text x="631.9" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">10</text>
+<text x="631.9" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">88</text>
+<text x="689.8" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">15</text>
+<text x="689.8" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">83</text>
+<text x="730.9" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">20</text>
+<text x="730.9" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">78</text>
+<text x="762.8" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">25</text>
+<text x="762.8" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">73</text>
+<text x="788.9" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">30</text>
+<text x="788.9" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">68</text>
+<text x="830.0" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">40</text>
+<text x="830.0" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">58</text>
+<text x="861.9" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">50</text>
+<text x="861.9" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">48</text>
+<text x="887.9" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">60</text>
+<text x="887.9" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">38</text>
+<text x="916.0" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">73</text>
+<text x="916.0" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">25</text>
+<text x="945.9" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">90</text>
+<text x="945.9" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">8</text>
+<text x="987.0" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">120</text>
+<text x="987.0" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">prev.</text>
+<text x="1028.1" y="420" font-size="10.5" text-anchor="middle" fill="#1f1f1d">160</text>
+<text x="1028.1" y="435" font-size="9.5" text-anchor="middle" fill="#5f5e5a">prev.</text>
+<text x="592" y="420" font-size="10" text-anchor="end" fill="#5f5e5a">MTau</text>
+<text x="592" y="435" font-size="9.5" text-anchor="end" fill="#5f5e5a">cycle</text>
+<line x1="600" y1="342.7" x2="1060" y2="342.7" stroke="#2a78d6" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.85"><title>snapshot rule, Both gates discrete: 2.830</title></line>
+<polyline fill="none" stroke="#2a78d6" stroke-width="2" points="627.4,187.3 685.3,187.3 726.4,198.0 758.3,287.0 784.4,329.0 825.5,352.2 857.4,354.2 883.4,356.3 911.5,349.8 941.4,349.4 982.5,343.1 1023.6,334.9"/>
+<line x1="627.4" y1="187.3" x2="627.4" y2="187.3" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="627.4" cy="187.3" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 10: 10.000 [10.000, 10.000]</title></circle>
+<line x1="685.3" y1="187.3" x2="685.3" y2="187.3" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="685.3" cy="187.3" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 15: 10.000 [10.000, 10.000]</title></circle>
+<line x1="726.4" y1="200.3" x2="726.4" y2="195.6" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="726.4" cy="198.0" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 20: 9.510 [9.400, 9.620]</title></circle>
+<line x1="758.3" y1="290.4" x2="758.3" y2="283.6" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="758.3" cy="287.0" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 25: 5.400 [5.242, 5.558]</title></circle>
+<line x1="784.4" y1="331.6" x2="784.4" y2="326.4" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="784.4" cy="329.0" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 30: 3.460 [3.340, 3.580]</title></circle>
+<line x1="825.5" y1="353.9" x2="825.5" y2="350.5" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="825.5" cy="352.2" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 40: 2.390 [2.311, 2.469]</title></circle>
+<line x1="857.4" y1="356.0" x2="857.4" y2="352.3" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="857.4" cy="354.2" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 50: 2.300 [2.215, 2.385]</title></circle>
+<line x1="883.4" y1="358.3" x2="883.4" y2="354.4" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="883.4" cy="356.3" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 60: 2.200 [2.111, 2.289]</title></circle>
+<line x1="911.5" y1="351.6" x2="911.5" y2="348.1" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="911.5" cy="349.8" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 73: 2.500 [2.418, 2.582]</title></circle>
+<line x1="941.4" y1="351.0" x2="941.4" y2="347.8" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="941.4" cy="349.4" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 90: 2.520 [2.448, 2.592]</title></circle>
+<line x1="982.5" y1="344.9" x2="982.5" y2="341.4" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="982.5" cy="343.1" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 120: 2.810 [2.730, 2.890]</title></circle>
+<line x1="1023.6" y1="336.5" x2="1023.6" y2="333.3" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="1023.6" cy="334.9" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 160: 3.190 [3.115, 3.265]</title></circle>
+<line x1="600" y1="336.6" x2="1060" y2="336.6" stroke="#eb6834" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.85"><title>snapshot rule, CA1 gate cosine (DG discrete): 3.110</title></line>
+<polyline fill="none" stroke="#eb6834" stroke-width="2" points="630.4,187.3 688.3,187.3 729.4,192.3 761.3,279.6 787.4,322.1 828.5,349.2 860.4,353.9 886.4,351.4 914.5,347.0 944.4,346.1 985.5,342.0 1026.6,332.9"/>
+<line x1="630.4" y1="187.3" x2="630.4" y2="187.3" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="625.9" y="182.8" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 10: 10.000 [10.000, 10.000]</title></rect>
+<line x1="688.3" y1="187.3" x2="688.3" y2="187.3" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="683.8" y="182.8" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 15: 10.000 [10.000, 10.000]</title></rect>
+<line x1="729.4" y1="194.1" x2="729.4" y2="190.5" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="724.9" y="187.8" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 20: 9.770 [9.687, 9.853]</title></rect>
+<line x1="761.3" y1="283.3" x2="761.3" y2="275.9" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="756.8" y="275.1" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 25: 5.740 [5.569, 5.911]</title></rect>
+<line x1="787.4" y1="324.8" x2="787.4" y2="319.4" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="782.9" y="317.6" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 30: 3.780 [3.656, 3.904]</title></rect>
+<line x1="828.5" y1="350.8" x2="828.5" y2="347.6" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="824.0" y="344.7" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 40: 2.530 [2.457, 2.603]</title></rect>
+<line x1="860.4" y1="355.7" x2="860.4" y2="352.2" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="855.9" y="349.4" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 50: 2.310 [2.231, 2.389]</title></rect>
+<line x1="886.4" y1="353.2" x2="886.4" y2="349.5" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="881.9" y="346.9" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 60: 2.430 [2.344, 2.516]</title></rect>
+<line x1="914.5" y1="348.9" x2="914.5" y2="345.1" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="910.0" y="342.5" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 73: 2.630 [2.542, 2.718]</title></rect>
+<line x1="944.4" y1="348.3" x2="944.4" y2="344.0" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="939.9" y="341.6" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 90: 2.670 [2.573, 2.767]</title></rect>
+<line x1="985.5" y1="343.8" x2="985.5" y2="340.2" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="981.0" y="337.5" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 120: 2.860 [2.777, 2.943]</title></rect>
+<line x1="1026.6" y1="335.1" x2="1026.6" y2="330.8" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="1022.1" y="328.4" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 160: 3.280 [3.181, 3.379]</title></rect>
+<line x1="600" y1="301.5" x2="1060" y2="301.5" stroke="#1baf7a" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.85"><title>snapshot rule, DG gate cosine (CA1 discrete): 4.730</title></line>
+<polyline fill="none" stroke="#1baf7a" stroke-width="2" points="633.4,187.3 691.3,187.3 732.4,193.8 764.3,268.4 790.4,317.1 831.5,350.3 863.4,353.1 889.4,350.3 917.5,350.7 947.4,347.9 988.5,341.8 1029.6,336.4"/>
+<line x1="633.4" y1="187.3" x2="633.4" y2="187.3" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="633.4,181.5 639.2,187.3 633.4,193.2 627.5,187.3" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 10: 10.000 [10.000, 10.000]</title></polygon>
+<line x1="691.3" y1="187.3" x2="691.3" y2="187.3" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="691.3,181.5 697.2,187.3 691.3,193.2 685.5,187.3" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 15: 10.000 [10.000, 10.000]</title></polygon>
+<line x1="732.4" y1="195.9" x2="732.4" y2="191.8" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="732.4,188.0 738.3,193.8 732.4,199.7 726.6,193.8" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 20: 9.700 [9.606, 9.794]</title></polygon>
+<line x1="764.3" y1="272.4" x2="764.3" y2="264.3" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="764.3,262.5 770.2,268.4 764.3,274.2 758.5,268.4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 25: 6.260 [6.072, 6.448]</title></polygon>
+<line x1="790.4" y1="320.3" x2="790.4" y2="313.9" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="790.4,311.3 796.2,317.1 790.4,323.0 784.5,317.1" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 30: 4.010 [3.863, 4.157]</title></polygon>
+<line x1="831.5" y1="352.0" x2="831.5" y2="348.6" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="831.5,344.4 837.4,350.3 831.5,356.1 825.6,350.3" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 40: 2.480 [2.402, 2.558]</title></polygon>
+<line x1="863.4" y1="355.0" x2="863.4" y2="351.2" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="863.4,347.2 869.2,353.1 863.4,358.9 857.5,353.1" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 50: 2.350 [2.262, 2.438]</title></polygon>
+<line x1="889.4" y1="352.6" x2="889.4" y2="347.9" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="889.4,344.4 895.3,350.3 889.4,356.1 883.6,350.3" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 60: 2.480 [2.371, 2.589]</title></polygon>
+<line x1="917.5" y1="352.3" x2="917.5" y2="349.1" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="917.5,344.8 923.3,350.7 917.5,356.6 911.6,350.7" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 73: 2.460 [2.384, 2.536]</title></polygon>
+<line x1="947.4" y1="349.5" x2="947.4" y2="346.3" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="947.4,342.0 953.2,347.9 947.4,353.7 941.5,347.9" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 90: 2.590 [2.516, 2.664]</title></polygon>
+<line x1="988.5" y1="343.7" x2="988.5" y2="340.0" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="988.5,336.0 994.3,341.8 988.5,347.7 982.6,341.8" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 120: 2.870 [2.784, 2.956]</title></polygon>
+<line x1="1029.6" y1="338.1" x2="1029.6" y2="334.7" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="1029.6,330.5 1035.5,336.4 1029.6,342.2 1023.8,336.4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 160: 3.120 [3.042, 3.198]</title></polygon>
+<line x1="600" y1="288.5" x2="1060" y2="288.5" stroke="#eda100" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.85"><title>snapshot rule, Both gates cosine: 5.330</title></line>
+<polyline fill="none" stroke="#eda100" stroke-width="2" points="636.4,187.3 694.3,187.3 735.4,192.1 767.3,260.4 793.4,311.9 834.5,343.8 866.4,353.1 892.4,346.6 920.5,346.8 950.4,346.1 991.5,340.7 1032.6,333.4"/>
+<line x1="636.4" y1="187.3" x2="636.4" y2="187.3" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="636.4,181.5 642.2,192.0 630.5,192.0" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 10: 10.000 [10.000, 10.000]</title></polygon>
+<line x1="694.3" y1="187.3" x2="694.3" y2="187.3" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="694.3,181.5 700.2,192.0 688.5,192.0" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 15: 10.000 [10.000, 10.000]</title></polygon>
+<line x1="735.4" y1="193.7" x2="735.4" y2="190.5" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="735.4,186.3 741.3,196.8 729.6,196.8" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 20: 9.780 [9.705, 9.855]</title></polygon>
+<line x1="767.3" y1="264.5" x2="767.3" y2="256.2" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="767.3,254.5 773.2,265.0 761.5,265.0" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 25: 6.630 [6.437, 6.823]</title></polygon>
+<line x1="793.4" y1="315.3" x2="793.4" y2="308.5" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="793.4,306.1 799.2,316.6 787.5,316.6" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 30: 4.250 [4.092, 4.408]</title></polygon>
+<line x1="834.5" y1="345.6" x2="834.5" y2="342.0" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="834.5,337.9 840.4,348.4 828.6,348.4" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 40: 2.780 [2.698, 2.862]</title></polygon>
+<line x1="866.4" y1="354.7" x2="866.4" y2="351.4" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="866.4,347.2 872.2,357.8 860.5,357.8" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 50: 2.350 [2.274, 2.426]</title></polygon>
+<line x1="892.4" y1="348.9" x2="892.4" y2="344.3" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="892.4,340.7 898.3,351.3 886.6,351.3" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 60: 2.650 [2.543, 2.757]</title></polygon>
+<line x1="920.5" y1="348.8" x2="920.5" y2="344.8" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="920.5,340.9 926.3,351.5 914.6,351.5" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 73: 2.640 [2.550, 2.730]</title></polygon>
+<line x1="950.4" y1="347.9" x2="950.4" y2="344.4" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="950.4,340.3 956.2,350.8 944.5,350.8" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 90: 2.670 [2.587, 2.753]</title></polygon>
+<line x1="991.5" y1="342.6" x2="991.5" y2="338.8" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="991.5,334.9 997.3,345.4 985.6,345.4" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 120: 2.920 [2.833, 3.007]</title></polygon>
+<line x1="1032.6" y1="335.4" x2="1032.6" y2="331.3" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="1032.6,327.5 1038.5,338.0 1026.8,338.0" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 160: 3.260 [3.166, 3.354]</title></polygon>
+<text x="70" y="532" font-size="15" font-weight="600" fill="#1f1f1d">Run length</text>
+<line x1="70" y1="804.0" x2="530" y2="804.0" stroke="#e4e2dd" stroke-width="1"/>
+<text x="62" y="808.0" font-size="11" text-anchor="end" fill="#5f5e5a">0</text>
+<line x1="70" y1="739.0" x2="530" y2="739.0" stroke="#e4e2dd" stroke-width="1"/>
+<text x="62" y="743.0" font-size="11" text-anchor="end" fill="#5f5e5a">5</text>
+<line x1="70" y1="674.0" x2="530" y2="674.0" stroke="#e4e2dd" stroke-width="1"/>
+<text x="62" y="678.0" font-size="11" text-anchor="end" fill="#5f5e5a">10</text>
+<line x1="70" y1="609.0" x2="530" y2="609.0" stroke="#e4e2dd" stroke-width="1"/>
+<text x="62" y="613.0" font-size="11" text-anchor="end" fill="#5f5e5a">15</text>
+<line x1="70" y1="544.0" x2="530" y2="544.0" stroke="#e4e2dd" stroke-width="1"/>
+<text x="62" y="548.0" font-size="11" text-anchor="end" fill="#5f5e5a">20</text>
+<text transform="translate(22,674.0) rotate(-90)" font-size="11.5" text-anchor="middle" fill="#5f5e5a">epochs</text>
+<text x="101.9" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">10</text>
+<text x="101.9" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">88</text>
+<text x="159.8" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">15</text>
+<text x="159.8" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">83</text>
+<text x="200.9" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">20</text>
+<text x="200.9" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">78</text>
+<text x="232.8" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">25</text>
+<text x="232.8" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">73</text>
+<text x="258.9" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">30</text>
+<text x="258.9" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">68</text>
+<text x="300.0" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">40</text>
+<text x="300.0" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">58</text>
+<text x="331.9" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">50</text>
+<text x="331.9" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">48</text>
+<text x="357.9" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">60</text>
+<text x="357.9" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">38</text>
+<text x="386.0" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">73</text>
+<text x="386.0" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">25</text>
+<text x="415.9" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">90</text>
+<text x="415.9" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">8</text>
+<text x="457.0" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">120</text>
+<text x="457.0" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">prev.</text>
+<text x="498.1" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">160</text>
+<text x="498.1" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">prev.</text>
+<text x="62" y="820" font-size="10" text-anchor="end" fill="#5f5e5a">MTau</text>
+<text x="62" y="835" font-size="9.5" text-anchor="end" fill="#5f5e5a">cycle</text>
+<line x1="70" y1="718.7" x2="530" y2="718.7" stroke="#2a78d6" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.85"><title>snapshot rule, Both gates discrete: 6.560</title></line>
+<polyline fill="none" stroke="#2a78d6" stroke-width="2" points="97.4,557.0 155.3,557.0 196.4,558.6 228.3,642.3 254.4,695.5 295.5,726.3 327.4,730.9 353.4,734.5 381.5,730.0 411.4,728.3 452.5,721.8 493.6,712.9"/>
+<line x1="97.4" y1="557.0" x2="97.4" y2="557.0" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="97.4" cy="557.0" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 10: 19.000 [19.000, 19.000]</title></circle>
+<line x1="155.3" y1="557.0" x2="155.3" y2="557.0" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="155.3" cy="557.0" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 15: 19.000 [19.000, 19.000]</title></circle>
+<line x1="196.4" y1="559.1" x2="196.4" y2="558.0" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="196.4" cy="558.6" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 20: 18.880 [18.839, 18.921]</title></circle>
+<line x1="228.3" y1="645.4" x2="228.3" y2="639.1" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="228.3" cy="642.3" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 25: 12.440 [12.198, 12.682]</title></circle>
+<line x1="254.4" y1="697.6" x2="254.4" y2="693.3" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="254.4" cy="695.5" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 30: 8.350 [8.181, 8.519]</title></circle>
+<line x1="295.5" y1="727.8" x2="295.5" y2="724.7" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="295.5" cy="726.3" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 40: 5.980 [5.858, 6.102]</title></circle>
+<line x1="327.4" y1="732.8" x2="327.4" y2="729.1" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="327.4" cy="730.9" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 50: 5.620 [5.479, 5.761]</title></circle>
+<line x1="353.4" y1="736.2" x2="353.4" y2="732.7" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="353.4" cy="734.5" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 60: 5.350 [5.212, 5.488]</title></circle>
+<line x1="381.5" y1="731.5" x2="381.5" y2="728.5" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="381.5" cy="730.0" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 73: 5.690 [5.574, 5.806]</title></circle>
+<line x1="411.4" y1="730.0" x2="411.4" y2="726.7" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="411.4" cy="728.3" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 90: 5.820 [5.695, 5.945]</title></circle>
+<line x1="452.5" y1="723.4" x2="452.5" y2="720.2" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="452.5" cy="721.8" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 120: 6.320 [6.196, 6.444]</title></circle>
+<line x1="493.6" y1="714.4" x2="493.6" y2="711.4" stroke="#2a78d6" stroke-width="1.5"/>
+<circle cx="493.6" cy="712.9" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates discrete, MTau 160: 7.010 [6.893, 7.127]</title></circle>
+<line x1="70" y1="707.0" x2="530" y2="707.0" stroke="#eb6834" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.85"><title>snapshot rule, CA1 gate cosine (DG discrete): 7.460</title></line>
+<polyline fill="none" stroke="#eb6834" stroke-width="2" points="100.4,557.0 158.3,557.0 199.4,558.0 231.3,630.7 257.4,683.1 298.5,719.9 330.4,728.2 356.4,729.1 384.5,725.6 414.4,723.3 455.5,717.9 496.6,706.9"/>
+<line x1="100.4" y1="557.0" x2="100.4" y2="557.0" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="95.9" y="552.5" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 10: 19.000 [19.000, 19.000]</title></rect>
+<line x1="158.3" y1="557.0" x2="158.3" y2="557.0" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="153.8" y="552.5" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 15: 19.000 [19.000, 19.000]</title></rect>
+<line x1="199.4" y1="558.6" x2="199.4" y2="557.4" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="194.9" y="553.5" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 20: 18.920 [18.874, 18.966]</title></rect>
+<line x1="231.3" y1="634.0" x2="231.3" y2="627.4" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="226.8" y="626.2" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 25: 13.330 [13.077, 13.583]</title></rect>
+<line x1="257.4" y1="685.7" x2="257.4" y2="680.5" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="252.9" y="678.6" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 30: 9.300 [9.098, 9.502]</title></rect>
+<line x1="298.5" y1="721.6" x2="298.5" y2="718.2" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="294.0" y="715.4" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 40: 6.470 [6.339, 6.601]</title></rect>
+<line x1="330.4" y1="729.8" x2="330.4" y2="726.6" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="325.9" y="723.7" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 50: 5.830 [5.707, 5.953]</title></rect>
+<line x1="356.4" y1="730.9" x2="356.4" y2="727.4" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="351.9" y="724.6" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 60: 5.760 [5.625, 5.895]</title></rect>
+<line x1="384.5" y1="727.3" x2="384.5" y2="723.9" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="380.0" y="721.1" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 73: 6.030 [5.902, 6.158]</title></rect>
+<line x1="414.4" y1="725.2" x2="414.4" y2="721.3" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="409.9" y="718.8" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 90: 6.210 [6.059, 6.361]</title></rect>
+<line x1="455.5" y1="719.7" x2="455.5" y2="716.2" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="451.0" y="713.4" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 120: 6.620 [6.486, 6.754]</title></rect>
+<line x1="496.6" y1="709.3" x2="496.6" y2="704.5" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="492.1" y="702.4" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 160: 7.470 [7.287, 7.653]</title></rect>
+<line x1="70" y1="669.5" x2="530" y2="669.5" stroke="#1baf7a" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.85"><title>snapshot rule, DG gate cosine (CA1 discrete): 10.350</title></line>
+<polyline fill="none" stroke="#1baf7a" stroke-width="2" points="103.4,557.0 161.3,557.0 202.4,557.5 234.3,617.8 260.4,680.5 301.5,721.5 333.4,726.5 359.4,728.6 387.5,728.6 417.4,724.3 458.5,719.8 499.6,713.8"/>
+<line x1="103.4" y1="557.0" x2="103.4" y2="557.0" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="103.4,551.1 109.2,557.0 103.4,562.9 97.5,557.0" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 10: 19.000 [19.000, 19.000]</title></polygon>
+<line x1="161.3" y1="557.0" x2="161.3" y2="557.0" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="161.3,551.1 167.2,557.0 161.3,562.9 155.5,557.0" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 15: 19.000 [19.000, 19.000]</title></polygon>
+<line x1="202.4" y1="557.9" x2="202.4" y2="557.1" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="202.4,551.7 208.3,557.5 202.4,563.4 196.6,557.5" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 20: 18.960 [18.928, 18.992]</title></polygon>
+<line x1="234.3" y1="621.4" x2="234.3" y2="614.3" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="234.3,612.0 240.2,617.8 234.3,623.7 228.5,617.8" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 25: 14.320 [14.047, 14.593]</title></polygon>
+<line x1="260.4" y1="683.4" x2="260.4" y2="677.6" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="260.4,674.6 266.2,680.5 260.4,686.4 254.5,680.5" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 30: 9.500 [9.276, 9.724]</title></polygon>
+<line x1="301.5" y1="723.0" x2="301.5" y2="719.9" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="301.5,715.6 307.4,721.5 301.5,727.3 295.7,721.5" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 40: 6.350 [6.229, 6.471]</title></polygon>
+<line x1="333.4" y1="728.4" x2="333.4" y2="724.6" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="333.4,720.7 339.2,726.5 333.4,732.4 327.5,726.5" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 50: 5.960 [5.812, 6.108]</title></polygon>
+<line x1="359.4" y1="730.8" x2="359.4" y2="726.4" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="359.4,722.8 365.3,728.6 359.4,734.5 353.6,728.6" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 60: 5.800 [5.634, 5.966]</title></polygon>
+<line x1="387.5" y1="730.1" x2="387.5" y2="727.1" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="387.5,722.8 393.3,728.6 387.5,734.5 381.6,728.6" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 73: 5.800 [5.681, 5.919]</title></polygon>
+<line x1="417.4" y1="726.1" x2="417.4" y2="722.5" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="417.4,718.5 423.2,724.3 417.4,730.2 411.5,724.3" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 90: 6.130 [5.994, 6.266]</title></polygon>
+<line x1="458.5" y1="721.5" x2="458.5" y2="718.1" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="458.5,713.9 464.3,719.8 458.5,725.6 452.6,719.8" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 120: 6.480 [6.349, 6.611]</title></polygon>
+<line x1="499.6" y1="715.5" x2="499.6" y2="712.1" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="499.6,707.9 505.5,713.8 499.6,719.6 493.8,713.8" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 160: 6.940 [6.811, 7.069]</title></polygon>
+<line x1="70" y1="644.8" x2="530" y2="644.8" stroke="#eda100" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.85"><title>snapshot rule, Both gates cosine: 12.250</title></line>
+<polyline fill="none" stroke="#eda100" stroke-width="2" points="106.4,557.0 164.3,557.0 205.4,557.1 237.3,607.3 263.4,671.0 304.5,713.6 336.4,725.1 362.4,722.6 390.5,724.8 420.4,724.3 461.5,716.0 502.6,709.4"/>
+<line x1="106.4" y1="557.0" x2="106.4" y2="557.0" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="106.4,551.1 112.2,561.7 100.5,561.7" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 10: 19.000 [19.000, 19.000]</title></polygon>
+<line x1="164.3" y1="557.0" x2="164.3" y2="557.0" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="164.3,551.1 170.2,561.7 158.5,561.7" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 15: 19.000 [19.000, 19.000]</title></polygon>
+<line x1="205.4" y1="557.3" x2="205.4" y2="557.0" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="205.4,551.3 211.3,561.8 199.6,561.8" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 20: 18.990 [18.980, 19.000]</title></polygon>
+<line x1="237.3" y1="610.8" x2="237.3" y2="603.8" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="237.3,601.5 243.2,612.0 231.5,612.0" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 25: 15.130 [14.862, 15.398]</title></polygon>
+<line x1="263.4" y1="674.1" x2="263.4" y2="667.9" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="263.4,665.2 269.2,675.7 257.5,675.7" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 30: 10.230 [9.994, 10.466]</title></polygon>
+<line x1="304.5" y1="715.5" x2="304.5" y2="711.8" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="304.5,707.8 310.4,718.3 298.7,718.3" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 40: 6.950 [6.809, 7.091]</title></polygon>
+<line x1="336.4" y1="727.0" x2="336.4" y2="723.2" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="336.4,719.2 342.2,729.8 330.5,729.8" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 50: 6.070 [5.925, 6.215]</title></polygon>
+<line x1="362.4" y1="724.7" x2="362.4" y2="720.6" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="362.4,716.8 368.3,727.3 356.6,727.3" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 60: 6.260 [6.102, 6.418]</title></polygon>
+<line x1="390.5" y1="726.7" x2="390.5" y2="723.0" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="390.5,719.0 396.3,729.5 384.6,729.5" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 73: 6.090 [5.946, 6.234]</title></polygon>
+<line x1="420.4" y1="725.9" x2="420.4" y2="722.7" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="420.4,718.5 426.2,729.0 414.5,729.0" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 90: 6.130 [6.007, 6.253]</title></polygon>
+<line x1="461.5" y1="718.0" x2="461.5" y2="714.0" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="461.5,710.1 467.3,720.7 455.6,720.7" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 120: 6.770 [6.617, 6.923]</title></polygon>
+<line x1="502.6" y1="711.5" x2="502.6" y2="707.3" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="502.6,703.5 508.5,714.0 496.8,714.0" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 160: 7.280 [7.118, 7.442]</title></polygon>
+<text x="600" y="532" font-size="15" font-weight="600" fill="#1f1f1d">AB retained: each cosine variant − both discrete</text>
+<line x1="600" y1="804.0" x2="1060" y2="804.0" stroke="#e4e2dd" stroke-width="1"/>
+<text x="592" y="808.0" font-size="11" text-anchor="end" fill="#5f5e5a">-0.3</text>
+<line x1="600" y1="760.7" x2="1060" y2="760.7" stroke="#e4e2dd" stroke-width="1"/>
+<text x="592" y="764.7" font-size="11" text-anchor="end" fill="#5f5e5a">-0.2</text>
+<line x1="600" y1="717.3" x2="1060" y2="717.3" stroke="#e4e2dd" stroke-width="1"/>
+<text x="592" y="721.3" font-size="11" text-anchor="end" fill="#5f5e5a">-0.1</text>
+<line x1="600" y1="674.0" x2="1060" y2="674.0" stroke="#5f5e5a" stroke-width="1"/>
+<text x="592" y="678.0" font-size="11" text-anchor="end" fill="#5f5e5a">0</text>
+<line x1="600" y1="630.7" x2="1060" y2="630.7" stroke="#e4e2dd" stroke-width="1"/>
+<text x="592" y="634.7" font-size="11" text-anchor="end" fill="#5f5e5a">+0.1</text>
+<line x1="600" y1="587.3" x2="1060" y2="587.3" stroke="#e4e2dd" stroke-width="1"/>
+<text x="592" y="591.3" font-size="11" text-anchor="end" fill="#5f5e5a">+0.2</text>
+<line x1="600" y1="544.0" x2="1060" y2="544.0" stroke="#e4e2dd" stroke-width="1"/>
+<text x="592" y="548.0" font-size="11" text-anchor="end" fill="#5f5e5a">+0.3</text>
+<text transform="translate(552,674.0) rotate(-90)" font-size="11.5" text-anchor="middle" fill="#5f5e5a">paired difference (95% CI)</text>
+<text x="631.9" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">10</text>
+<text x="631.9" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">88</text>
+<text x="689.8" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">15</text>
+<text x="689.8" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">83</text>
+<text x="730.9" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">20</text>
+<text x="730.9" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">78</text>
+<text x="762.8" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">25</text>
+<text x="762.8" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">73</text>
+<text x="788.9" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">30</text>
+<text x="788.9" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">68</text>
+<text x="830.0" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">40</text>
+<text x="830.0" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">58</text>
+<text x="861.9" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">50</text>
+<text x="861.9" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">48</text>
+<text x="887.9" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">60</text>
+<text x="887.9" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">38</text>
+<text x="916.0" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">73</text>
+<text x="916.0" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">25</text>
+<text x="945.9" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">90</text>
+<text x="945.9" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">8</text>
+<text x="987.0" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">120</text>
+<text x="987.0" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">prev.</text>
+<text x="1028.1" y="820" font-size="10.5" text-anchor="middle" fill="#1f1f1d">160</text>
+<text x="1028.1" y="835" font-size="9.5" text-anchor="middle" fill="#5f5e5a">prev.</text>
+<text x="592" y="820" font-size="10" text-anchor="end" fill="#5f5e5a">MTau</text>
+<text x="592" y="835" font-size="9.5" text-anchor="end" fill="#5f5e5a">cycle</text>
+<line x1="600" y1="710.8" x2="1060" y2="710.8" stroke="#eb6834" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.85"><title>snapshot rule, CA1 gate cosine (DG discrete): -0.085</title></line>
+<polyline fill="none" stroke="#eb6834" stroke-width="2" points="630.4,651.5 688.3,689.2 729.4,689.2 761.3,687.4 787.4,684.4 828.5,704.8 860.4,700.9 886.4,689.6 914.5,679.2 944.4,690.0 985.5,689.6 1026.6,699.1"/>
+<line x1="630.4" y1="660.5" x2="630.4" y2="642.4" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="625.9" y="647.0" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 10: 0.052 [0.031, 0.073]</title></rect>
+<line x1="688.3" y1="701.9" x2="688.3" y2="676.4" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="683.8" y="684.7" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 15: -0.035 [-0.064, -0.006]</title></rect>
+<line x1="729.4" y1="704.6" x2="729.4" y2="673.7" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="724.9" y="684.7" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 20: -0.035 [-0.071, 0.001]</title></rect>
+<line x1="761.3" y1="706.0" x2="761.3" y2="668.8" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="756.8" y="682.9" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 25: -0.031 [-0.074, 0.012]</title></rect>
+<line x1="787.4" y1="703.9" x2="787.4" y2="664.9" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="782.9" y="679.9" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 30: -0.024 [-0.069, 0.021]</title></rect>
+<line x1="828.5" y1="724.2" x2="828.5" y2="685.4" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="824.0" y="700.3" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 40: -0.071 [-0.116, -0.026]</title></rect>
+<line x1="860.4" y1="717.3" x2="860.4" y2="684.4" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="855.9" y="696.4" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 50: -0.062 [-0.100, -0.024]</title></rect>
+<line x1="886.4" y1="708.5" x2="886.4" y2="670.7" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="881.9" y="685.1" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 60: -0.036 [-0.080, 0.008]</title></rect>
+<line x1="914.5" y1="698.4" x2="914.5" y2="660.0" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="910.0" y="674.7" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 73: -0.012 [-0.056, 0.032]</title></rect>
+<line x1="944.4" y1="708.9" x2="944.4" y2="671.2" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="939.9" y="685.5" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 90: -0.037 [-0.081, 0.007]</title></rect>
+<line x1="985.5" y1="710.5" x2="985.5" y2="668.7" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="981.0" y="685.1" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 120: -0.036 [-0.084, 0.012]</title></rect>
+<line x1="1026.6" y1="720.7" x2="1026.6" y2="677.6" stroke="#eb6834" stroke-width="1.5"/>
+<rect x="1022.1" y="694.6" width="9.0" height="9.0" rx="1" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"><title>CA1 gate cosine (DG discrete), MTau 160: -0.058 [-0.108, -0.008]</title></rect>
+<line x1="600" y1="703.0" x2="1060" y2="703.0" stroke="#1baf7a" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.85"><title>snapshot rule, DG gate cosine (CA1 discrete): -0.067</title></line>
+<polyline fill="none" stroke="#1baf7a" stroke-width="2" points="633.4,677.0 691.3,691.8 732.4,689.2 764.3,687.0 790.4,682.2 831.5,689.6 863.4,705.6 889.4,680.1 917.5,687.0 947.4,684.8 988.5,676.6 1029.6,685.3"/>
+<line x1="633.4" y1="684.2" x2="633.4" y2="669.9" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="633.4,671.2 639.2,677.0 633.4,682.9 627.5,677.0" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 10: -0.007 [-0.024, 0.010]</title></polygon>
+<line x1="691.3" y1="703.0" x2="691.3" y2="680.5" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="691.3,685.9 697.2,691.8 691.3,697.6 685.5,691.8" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 15: -0.041 [-0.067, -0.015]</title></polygon>
+<line x1="732.4" y1="702.4" x2="732.4" y2="675.9" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="732.4,683.3 738.3,689.2 732.4,695.0 726.6,689.2" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 20: -0.035 [-0.066, -0.004]</title></polygon>
+<line x1="764.3" y1="706.9" x2="764.3" y2="667.1" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="764.3,681.1 770.2,687.0 764.3,692.9 758.5,687.0" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 25: -0.030 [-0.076, 0.016]</title></polygon>
+<line x1="790.4" y1="699.4" x2="790.4" y2="665.1" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="790.4,676.4 796.2,682.2 790.4,688.1 784.5,682.2" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 30: -0.019 [-0.059, 0.021]</title></polygon>
+<line x1="831.5" y1="709.6" x2="831.5" y2="669.6" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="831.5,683.8 837.4,689.6 831.5,695.5 825.6,689.6" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 40: -0.036 [-0.082, 0.010]</title></polygon>
+<line x1="863.4" y1="721.1" x2="863.4" y2="690.2" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="863.4,699.8 869.2,705.6 863.4,711.5 857.5,705.6" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 50: -0.073 [-0.109, -0.037]</title></polygon>
+<line x1="889.4" y1="700.4" x2="889.4" y2="659.7" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="889.4,674.2 895.3,680.1 889.4,685.9 883.6,680.1" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 60: -0.014 [-0.061, 0.033]</title></polygon>
+<line x1="917.5" y1="707.2" x2="917.5" y2="666.8" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="917.5,681.1 923.3,687.0 917.5,692.9 911.6,687.0" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 73: -0.030 [-0.077, 0.017]</title></polygon>
+<line x1="947.4" y1="702.5" x2="947.4" y2="667.2" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="947.4,679.0 953.2,684.8 947.4,690.7 941.5,684.8" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 90: -0.025 [-0.066, 0.016]</title></polygon>
+<line x1="988.5" y1="692.5" x2="988.5" y2="660.7" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="988.5,670.8 994.3,676.6 988.5,682.5 982.6,676.6" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 120: -0.006 [-0.043, 0.031]</title></polygon>
+<line x1="1029.6" y1="703.1" x2="1029.6" y2="667.4" stroke="#1baf7a" stroke-width="1.5"/>
+<polygon points="1029.6,679.4 1035.5,685.3 1029.6,691.1 1023.8,685.3" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"><title>DG gate cosine (CA1 discrete), MTau 160: -0.026 [-0.067, 0.015]</title></polygon>
+<line x1="600" y1="731.2" x2="1060" y2="731.2" stroke="#eda100" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.85"><title>snapshot rule, Both gates cosine: -0.132</title></line>
+<polyline fill="none" stroke="#eda100" stroke-width="2" points="636.4,650.2 694.3,694.4 735.4,703.0 767.3,701.3 793.4,703.0 834.5,703.9 866.4,721.2 892.4,684.4 920.5,683.1 950.4,681.4 991.5,689.6 1032.6,698.3"/>
+<line x1="636.4" y1="660.0" x2="636.4" y2="640.4" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="636.4,644.3 642.2,654.8 630.5,654.8" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 10: 0.055 [0.032, 0.078]</title></polygon>
+<line x1="694.3" y1="707.1" x2="694.3" y2="681.6" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="694.3,688.5 700.2,699.0 688.5,699.0" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 15: -0.047 [-0.076, -0.018]</title></polygon>
+<line x1="735.4" y1="717.6" x2="735.4" y2="688.4" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="735.4,697.2 741.3,707.7 729.6,707.7" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 20: -0.067 [-0.101, -0.033]</title></polygon>
+<line x1="767.3" y1="719.3" x2="767.3" y2="683.3" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="767.3,695.4 773.2,706.0 761.5,706.0" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 25: -0.063 [-0.105, -0.021]</title></polygon>
+<line x1="793.4" y1="724.9" x2="793.4" y2="681.1" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="793.4,697.2 799.2,707.7 787.5,707.7" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 30: -0.067 [-0.118, -0.016]</title></polygon>
+<line x1="834.5" y1="723.2" x2="834.5" y2="684.6" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="834.5,698.0 840.4,708.6 828.6,708.6" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 40: -0.069 [-0.114, -0.024]</title></polygon>
+<line x1="866.4" y1="739.1" x2="866.4" y2="703.4" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="866.4,715.4 872.2,725.9 860.5,725.9" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 50: -0.109 [-0.150, -0.068]</title></polygon>
+<line x1="892.4" y1="707.6" x2="892.4" y2="661.2" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="892.4,678.5 898.3,689.1 886.6,689.1" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 60: -0.024 [-0.078, 0.030]</title></polygon>
+<line x1="920.5" y1="702.1" x2="920.5" y2="664.1" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="920.5,677.2 926.3,687.8 914.6,687.8" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 73: -0.021 [-0.065, 0.023]</title></polygon>
+<line x1="950.4" y1="702.9" x2="950.4" y2="659.8" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="950.4,675.5 956.2,686.0 944.5,686.0" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 90: -0.017 [-0.067, 0.033]</title></polygon>
+<line x1="991.5" y1="709.1" x2="991.5" y2="670.1" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="991.5,683.8 997.3,694.3 985.6,694.3" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 120: -0.036 [-0.081, 0.009]</title></polygon>
+<line x1="1032.6" y1="718.2" x2="1032.6" y2="678.3" stroke="#eda100" stroke-width="1.5"/>
+<polygon points="1032.6,692.4 1038.5,702.9 1026.8,702.9" fill="#eda100" stroke="#fcfcfb" stroke-width="1.5"><title>Both gates cosine, MTau 160: -0.056 [-0.102, -0.010]</title></polygon>
+</svg>

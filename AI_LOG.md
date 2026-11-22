@@ -1,7 +1,7 @@
 # AI-use log: continuous theta in `ch7/hip`
 
 This log records how an AI coding assistant, Claude Code (Opus 5.5), helped with the project between
-2026-11-19 and 2026-11-20. The design decisions were made by the student. The AI fixed the code, ran the
+2026-11-19 and 2026-11-21. The design decisions were made by the student. The AI fixed the code, ran the
 experiments, and took a few implementation decisions, which are flagged below.
 The project overview is in [README.md](README.md).
 
@@ -11,7 +11,7 @@ The project overview is in [README.md](README.md).
 | What changed in `hip.go` | [2. Changes](#2-changes-to-hipgo) |
 | Who decided what | [3. Design decisions](#3-design-decisions) |
 | What was run and what came out | [4. Experiments](#4-experiments) |
-| What comes next | [5. Next: XCal](#5-next-xcal) |
+| The switch to XCal and its results | [5. XCal](#5-xcal) |
 
 ---
 
@@ -119,25 +119,15 @@ At n = 10 the standard deviations were large: AB retained ≈ 0.19, epochs to le
 The 95% CIs in `grid_summary.csv` are paired against discrete and are not corrected for multiple
 comparisons.
 
-## 5. Next: XCal
+## 5. XCal
 
-**Plan.** Four conditions, crossing theta with the learning rule:
+### Why the model uses snapshots
 
-|  | Snapshot rule (current) | Standard XCal |
-|---|---|---|
-| **Discrete theta** | ✓ | ✓ |
-| **Continuous theta** | ✓ | ✓ |
-
-- 100 runs per condition, 20 processes, default learning rates.
-- Make the minimal switch: change the hippocampal path types from `EcCa1Path`/`CHLPath` to standard
-  leabra paths. The rule should be selectable through a `Config` flag.
-- Then sweep the XCal time constants.
-
-**Why the model uses snapshots.** The theta phases are the error signal in the model this sim is based
-on (Ketz, Morkonda & O'Reilly, 2013). The minus state is the end of Q1, where CA1 and CA3 reflect only
-EC input, with DG off. The plus state is the end of the trial. Standard XCal compares `AvgS` (τ ≈ 2
-cycles) with `AvgM` (τ = 10, which covers roughly cycles 70–99). That puts the minus side in late Q3
-instead of Q1, so the effect differs by pathway:
+The theta phases are the error signal in the model this sim is based on (Ketz, Morkonda & O'Reilly,
+2013). The minus state is the end of Q1, where CA1 and CA3 reflect only EC input, with DG off. The plus
+state is the end of the trial. Standard XCal compares `AvgS` (τ ≈ 2 cycles) with `AvgM` (τ = 10, which
+covers roughly cycles 70–99). That puts the minus side in late Q3 instead of Q1, so the effect differs by
+pathway:
 
 | Pathway | Under standard XCal |
 |---|---|
@@ -146,13 +136,98 @@ instead of Q1, so the effect differs by pathway:
 | CA3→CA1 | Almost unchanged; it already compares cycle 75 with cycle 99. |
 | ECin→DG | Small change; the rule is mostly Hebbian. |
 
-**Implementation notes:**
-- Changing the path type also stops the class-based parameter blocks (`.EcCa1Path`, `.HippoCHL`,
-  `.PPath`) from applying: their learning rates, WtBal, Hebb and `SetLLrn` settings.
-- The running averages are **not** reset at trial start. `DecayState` leaves `AvgSS`, `AvgS` and `AvgM`
-  alone; they are initialized only in `InitWeights`. At learning time the previous trial contributes
-  almost nothing (about 0.9¹⁰⁰ ≈ 0), but early-cycle averages still contain the previous trial's state.
-  `AvgL` persists across trials by design.
+### Changes to `hip.go`
+
+1. **Two more `Config` fields:**
+   - `XCal` (default `false`) switches every hippocampal `EcCa1Path` and `CHLPath` to a standard
+     leabra path, which uses the XCal rule.
+   - `XCalMTau` (default 10) is the `AvgM` time constant, set on all layers when `XCal` is on.
+2. **The `hipPath` helper in `ConfigNet`** creates each hippocampal path. When `XCal` is on, it makes a
+   standard path and adds the old type name as a class. This keeps `.EcCa1Path`, `.HippoCHL` and `.PPath`
+   applying, so their learning rates, WtBal and Hebb settings are unchanged.
+3. **The only parameter difference is soft weight bounds.** CHL paths force soft bounds off; under
+   XCal they are on.
+4. **Weights update once per trial**, as in standard leabra. Default learning rates are used.
+
+**Timing of the averages.** `AvgM` is read at cycle 99, so its mean lag is about MTau + 1 cycles.
+MTau ≈ 73 centres it near cycle 25, the end of Q1.
+
+**Carry-over between trials.** The running averages are **not** reset at trial start:
+- `DecayState` leaves `AvgSS`, `AvgS` and `AvgM` alone. They are initialized only in `InitWeights`.
+- At MTau 10 the previous trial's contribution is negligible (0.9¹⁰⁰ ≈ 0).
+- At MTau 73 it is about 24% of `AvgM`. The rest is about 11% from Q1, 37% from cycles 25–74 and 28%
+  from cycles 75–99.
+- `AvgL` persists across trials by design.
+
+### Decisions
+
+**Student:**
+- XCal on every path that used the snapshot rule, with default learning rates and the once-per-trial
+  update.
+- The comparison design: snapshot vs XCal at MTau 10 (the default) vs XCal at MTau ≈ 73 (aligned to
+  cycle 25), each with discrete and continuous theta.
+- Continuous theta here means the CA1 gate only, with DG kept discrete.
+- The MTau sweep, and adding the DG-only and both-gate cosine variants to it.
+
+**AI judgement calls:**
+- `XCalMTau` is applied to every layer, including EC and DG, rather than only to the receiving layers of
+  changed paths.
+- The `hipPath` helper keeps the existing parameter classes rather than copying them into new ones.
+- The MTau grid values were proposed by the AI and approved by the student.
+
+### Experiments
+
+All conditions use n = 100 runs, seeds paired with §4, run as 24 parallel processes. The CIs are paired
+against discrete theta under the same rule and MTau, and are not corrected for multiple comparisons.
+Outputs are in `ch7/hip/results/xcal/`.
+
+**Rule comparison** (`xcal_runs.csv`, `xcal_summary.csv`, `xcal_results.svg`):
+
+| Rule | Theta | AB retained | Epochs to learn AB |
+|---|---|---|---|
+| Snapshot | Discrete | 0.63 | 2.8 |
+| Snapshot | CA1 cosine | 0.55 | 3.1 |
+| XCal, MTau 10 | Discrete | 0.08 | never (all 100 runs) |
+| XCal, MTau 10 | CA1 cosine | 0.14 | never (all 100 runs) |
+| XCal, MTau 73 | Discrete | 0.71 | 2.5 |
+| XCal, MTau 73 | CA1 cosine | 0.70 | 2.6 |
+
+- At MTau 73 with discrete theta, XCal beats the snapshot rule by +0.07 (CI 0.02 to 0.12).
+- The cost of the CA1 cosine drops from −0.085 (significant) under the snapshot rule to −0.012 (not
+  significant) under XCal at MTau 73.
+
+**MTau sweep** (`mtau/mtau_runs.csv`, `mtau/mtau_summary.csv`, `mtau/mtau_sweep.svg`): MTau ∈ {10, 15,
+20, 25, 30, 40, 50, 60, 73, 90, 120, 160}, crossed with four theta variants. AB retained (* = CI vs
+discrete excludes 0):
+
+| MTau | Discrete | CA1 cosine | DG cosine | Both cosine |
+|---|---|---|---|---|
+| 10 | .08 | .14* | .08 | .14* |
+| 15 | .34 | .31* | .30* | .30* |
+| 20 | .57 | .54 | .54* | .51* |
+| 25 | .66 | .63 | .63 | .60* |
+| 30 | .69 | .67 | .67 | .63* |
+| 40 | .73 | .66* | .69 | .66* |
+| 50 | .74 | .68* | .67* | .63* |
+| 60 | .72 | .68 | .71 | .70 |
+| 73 | .71 | .70 | .68 | .69 |
+| 90 | .67 | .63 | .65 | .65 |
+| 120 | .70 | .66 | .69 | .66 |
+| 160 | .71 | .65* | .69 | .66* |
+| *Snapshot rule* | *.63* | *.55* | *.57* | *.50* |
+
+- **Threshold:** every variant fails below MTau 20 and learns from about MTau 25. Above MTau 30 there
+  is a broad plateau.
+- **Near the threshold, the DG cosine slows learning.** At MTau 25, the runs that never learned AB
+  were: discrete 3, CA1 cosine 4, DG cosine 9, both 14. Epochs to learn AB were 5.4 for discrete vs 6.6
+  for both.
+- **From MTau 40 up, the DG cosine costs little learning speed** (within about 0.1–0.4 epochs of
+  discrete). Under the snapshot rule it cost about 1.9 epochs.
+- **XCal beats the snapshot rule for every variant above MTau 30.** The gain is largest for both-gate
+  cosine (about 0.69 vs 0.50).
+- **The theta variants are closest at MTau 60–73**, where no cosine variant differs significantly from
+  discrete. Both-gate cosine is reliably worst at MTau 15–50 (−0.05 to −0.11).
+- Discrete theta peaks at MTau 50 (0.74). Its run length is shortest at MTau 60 (5.4 epochs).
 
 **Earlier suggestion, not pursued yet:** stats aimed at H1 and H2, namely intrusions of the competing
 associate and CA3 pattern similarity for same-cue AB/AC pairs.
